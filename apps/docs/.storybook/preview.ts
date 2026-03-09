@@ -1,4 +1,6 @@
 import type { Preview } from "@storybook/react";
+import "antd/dist/reset.css";
+import "@ct-design/ui/styles/index.less";
 
 const preview: Preview = {
   parameters: {

@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { AppstoreOutlined } from "@ct-design/icons";
 import { Button } from "@ct-design/ui";
 
 const meta = {
@@ -34,5 +35,12 @@ export const Disabled: Story = {
   args: {
     disabled: true,
     children: "Disabled button"
+  }
+};
+
+export const WithIcon: Story = {
+  args: {
+    icon: <AppstoreOutlined />,
+    children: "Button with icon"
   }
 };

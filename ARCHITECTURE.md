@@ -2,7 +2,7 @@
 
 ## 最终采用的主流方案
 
-结合 `gpt.md` 与 `cc.html` 两份方案，本项目最终选择一套更偏“先能跑通、再渐进扩展”的主流落地架构：
+本项目一套偏“先能跑通、再渐进扩展”的主流落地架构：
 
 - 根层使用 `pnpm workspace + turbo`
 - `apps/*` 使用 `Rsbuild`，用于业务应用与站点
@@ -14,7 +14,7 @@
 
 ## 为什么不一次性把所有包都建出来
 
-两份方案都覆盖了 `ui`、`tokens`、`theme`、`request`、`i18n`、`icons` 等完整企业体系，这对长期演进是正确的，但对“首个可运行模板”来说过重。  
+两份方案都覆盖了 `ui`、`tokens`、`theme`、`request`、`i18n`、`icons` 等完整企业体系，这对长期演进是正确的，但对“首个可运行模板”来说过重。
 当前仓库优先落地这 3 个目标：
 
 - 保证工程骨架足够主流，后续加包不返工
@@ -26,6 +26,7 @@
 - `apps/web`
 - `packages/utils`
 - `packages/tokens`
+- `packages/icons`
 - `packages/request`
 - `packages/ui`
 - `tooling/tsconfig`
@@ -37,9 +38,9 @@
 
 1. `packages/hooks`
 2. `packages/i18n`
-3. `apps/docs` 或 Storybook
-4. `packages/icons`
-5. `apps/admin`
+3. `apps/admin`
+4. `packages/hooks`
+5. `packages/i18n`
 
 ## 分层原则
 
@@ -59,13 +60,15 @@
 - `packages/ui`
 - `packages/request`
 - `packages/tokens`
+- `packages/icons`
 
 当前分工如下：
 
 - `utils`：基础字符串和通用工具能力
 - `tokens`：主题源数据、深浅色模式与 CSS Variables 生成
+- `icons`：图标统一出口，避免业务直接散落依赖图标实现
 - `request`：axios 统一封装和 API URL 组装
-- `ui`：React 组件入口，消费 tokens 而不是直接耦合 app
+- `ui`：React 组件入口，通过 `antd` adapter 隔离底层实现
 
 ### tooling
 
@@ -78,7 +81,7 @@
 
 ### 场景一：先跑通单包 npm 发布
 
-适合你当前阶段。  
+适合你当前阶段。
 直接对某个包执行构建、测试和 `publish`，最快验证链路。
 
 ### 场景二：后续做多包版本联动

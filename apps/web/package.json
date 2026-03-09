@@ -11,10 +11,12 @@
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
   "dependencies": {
+    "@ct-design/icons": "workspace:*",
     "@ct-design/request": "workspace:*",
     "@ct-design/tokens": "workspace:*",
     "@ct-design/ui": "workspace:*",
     "@ct-design/utils": "workspace:*",
+    "antd": "^5.27.5",
     "react": "^19.2.4",
     "react-dom": "^19.2.4"
   },

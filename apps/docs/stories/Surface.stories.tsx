@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { SettingOutlined } from "@ct-design/icons";
 import { Surface } from "@ct-design/ui";
 
 const meta = {
@@ -27,5 +28,13 @@ export const Light: Story = {
   args: {
     themeMode: "default",
     children: "Light theme surface preview."
+  }
+};
+
+export const WithTitle: Story = {
+  args: {
+    title: "Settings",
+    extra: <SettingOutlined />,
+    children: "Ant Design adapter based card surface."
   }
 };

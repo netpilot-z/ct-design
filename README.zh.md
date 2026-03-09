@@ -26,9 +26,10 @@
 │  ├─ docs/                # Storybook 文档应用
 │  └─ web/                 # 示例应用，消费 workspace 包
 ├─ packages/
+│  ├─ icons/               # 基于 Ant Design Icons 的图标包
 │  ├─ request/             # 基于 axios 的请求层
 │  ├─ tokens/              # 主题 token 与 CSS Variables
-│  ├─ ui/                  # React 组件库
+│  ├─ ui/                  # 基于 antd adapter 的 React 组件库
 │  └─ utils/               # 可独立发布的工具包
 ├─ tooling/
 │  ├─ tsconfig/            # 共享 TypeScript 配置
@@ -85,8 +86,16 @@ pnpm docs:build
 
 - `@ct-design/utils`
 - `@ct-design/tokens`
+- `@ct-design/icons`
 - `@ct-design/request`
 - `@ct-design/ui`
+
+其中 `@ct-design/tokens` 现在会输出多种消费格式：
+
+- JavaScript token 导出
+- 默认/暗黑主题 CSS Variables
+- Less 变量文件
+- Ant Design 主题 JSON
 
 ## 发布
 

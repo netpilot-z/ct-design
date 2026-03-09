@@ -23,9 +23,10 @@ workspace-based local development, and an npm/GitHub release workflow.
 │  ├─ docs/                # Storybook app for UI documentation
 │  └─ web/                 # Example app consuming workspace packages
 ├─ packages/
+│  ├─ icons/               # Shared icon package based on Ant Design icons
 │  ├─ request/             # Shared axios-based request layer
 │  ├─ tokens/              # Theme tokens and CSS variable helpers
-│  ├─ ui/                  # Shared React UI components
+│  ├─ ui/                  # Shared React UI components with antd adapters
 │  └─ utils/               # Publishable utility package
 ├─ tooling/
 │  ├─ tsconfig/            # Shared TypeScript configs
@@ -82,8 +83,16 @@ Currently prepared packages:
 
 - `@ct-design/utils`
 - `@ct-design/tokens`
+- `@ct-design/icons`
 - `@ct-design/request`
 - `@ct-design/ui`
+
+`@ct-design/tokens` now produces multiple outputs for different consumers:
+
+- JavaScript token exports
+- CSS variables for default and dark themes
+- Less variable files
+- Ant Design theme JSON payloads
 
 ## Publishing
 

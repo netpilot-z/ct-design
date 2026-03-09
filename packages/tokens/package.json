@@ -13,7 +13,13 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    }
+    },
+    "./css/default.css": "./dist/css/default.css",
+    "./css/dark.css": "./dist/css/dark.css",
+    "./less/variables.less": "./dist/less/variables.less",
+    "./less/dark.variables.less": "./dist/less/dark.variables.less",
+    "./antd/default.json": "./dist/antd/default.json",
+    "./antd/dark.json": "./dist/antd/dark.json"
   },
   "files": [
     "dist"
@@ -22,7 +28,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup --config tsup.config.ts",
+    "build": "tsup --config tsup.config.ts && node scripts/generate-assets.mjs",
     "lint": "eslint \"src/**/*.ts\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

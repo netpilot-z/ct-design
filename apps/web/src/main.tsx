@@ -1,5 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
+import "antd/dist/reset.css";
+import "@ct-design/ui/styles/index.less";
 import App from "./App";
 import "./styles/index.less";
 

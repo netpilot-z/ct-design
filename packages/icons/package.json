@@ -1,12 +1,10 @@
 {
-  "name": "@ct-design/ui",
+  "name": "@ct-design/icons",
   "version": "0.1.0",
-  "description": "Shared React UI components for the ct-design monorepo.",
+  "description": "Shared icon exports for the ct-design monorepo.",
   "license": "MIT",
   "type": "module",
-  "sideEffects": [
-    "**/*.less"
-  ],
+  "sideEffects": false,
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
@@ -15,8 +13,7 @@
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
-    },
-    "./styles/index.less": "./dist/styles/index.less"
+    }
   },
   "files": [
     "dist"
@@ -25,25 +22,21 @@
     "access": "public"
   },
   "scripts": {
-    "build": "tsup --config tsup.config.ts && node scripts/copy-less-assets.mjs",
+    "build": "tsup --config tsup.config.ts",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },
-  "dependencies": {
-    "@ct-design/tokens": "workspace:*"
-  },
   "peerDependencies": {
-    "antd": ">=5",
-    "less": ">=4",
+    "@ant-design/icons": ">=5",
     "react": ">=18",
     "react-dom": ">=18"
   },
   "devDependencies": {
+    "@ant-design/icons": "^6.1.0",
     "@ct-design/tsconfig": "workspace:*",
     "@ct-design/tsup-config": "workspace:*",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
-    "antd": "^5.27.5",
     "react": "^19.2.0",
     "react-dom": "^19.2.0"
   }

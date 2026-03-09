@@ -1,0 +1,7 @@
+{
+  "extends": "@ct-design/tsconfig/library.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "include": ["src", "tsup.config.ts"]
+}
