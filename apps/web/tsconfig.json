@@ -1,0 +1,4 @@
+{
+  "extends": "@ct-design/tsconfig/react-app.json",
+  "include": ["src", "rsbuild.config.ts"]
+}

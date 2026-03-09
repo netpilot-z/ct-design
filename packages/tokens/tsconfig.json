@@ -1,0 +1,4 @@
+{
+  "extends": "@ct-design/tsconfig/library.json",
+  "include": ["src", "tsup.config.ts"]
+}

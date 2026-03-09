@@ -1,0 +1,7 @@
+{
+  "extends": "@ct-design/tsconfig/react-app.json",
+  "compilerOptions": {
+    "jsx": "react-jsx"
+  },
+  "include": [".storybook", "stories"]
+}

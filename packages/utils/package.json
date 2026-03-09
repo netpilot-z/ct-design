@@ -1,0 +1,39 @@
+{
+  "name": "@ct-design/utils",
+  "version": "0.1.1",
+  "description": "Shared utility helpers for the ct-design monorepo.",
+  "license": "MIT",
+  "type": "module",
+  "sideEffects": false,
+  "author": "netpilot",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsup --config tsup.config.ts",
+    "lint": "eslint \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "@ct-design/tsconfig": "workspace:*",
+    "@ct-design/tsup-config": "workspace:*"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpilot-z/ct-design.git"
+  }
+}
