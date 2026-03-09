@@ -21,6 +21,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpilot-z/ct-design.git",
+    "directory": "packages/ui"
+  },
+  "homepage": "https://github.com/netpilot-z/ct-design/tree/main/packages/ui",
   "publishConfig": {
     "access": "public"
   },

@@ -18,6 +18,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpilot-z/ct-design.git",
+    "directory": "packages/icons"
+  },
+  "homepage": "https://github.com/netpilot-z/ct-design/tree/main/packages/icons",
   "publishConfig": {
     "access": "public"
   },

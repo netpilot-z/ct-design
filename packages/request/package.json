@@ -18,6 +18,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpilot-z/ct-design.git",
+    "directory": "packages/request"
+  },
+  "homepage": "https://github.com/netpilot-z/ct-design/tree/main/packages/request",
   "publishConfig": {
     "access": "public"
   },

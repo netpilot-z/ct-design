@@ -24,6 +24,12 @@
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netpilot-z/ct-design.git",
+    "directory": "packages/tokens"
+  },
+  "homepage": "https://github.com/netpilot-z/ct-design/tree/main/packages/tokens",
   "publishConfig": {
     "access": "public"
   },

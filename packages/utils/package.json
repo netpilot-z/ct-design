@@ -34,6 +34,8 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/netpilot-z/ct-design.git"
-  }
+    "url": "https://github.com/netpilot-z/ct-design.git",
+    "directory": "packages/utils"
+  },
+  "homepage": "https://github.com/netpilot-z/ct-design/tree/main/packages/utils"
 }

@@ -200,6 +200,9 @@ importers:
       '@ct-design/tokens':
         specifier: workspace:*
         version: link:../tokens
+      less:
+        specifier: '>=4'
+        version: 4.5.1
     devDependencies:
       '@ct-design/tsconfig':
         specifier: workspace:*
