@@ -2,7 +2,14 @@ import { AppstoreOutlined, HomeOutlined, SettingOutlined } from "@ct-design/icon
 
 export default {
   title: "Foundations/Icons",
-  tags: ["autodocs"]
+  tags: ["autodocs"],
+  parameters: {
+    docs: {
+      description: {
+        component: "Shared icon exports re-exposed from Ant Design icons for consistent workspace consumption."
+      }
+    }
+  }
 };
 
 export function Gallery() {
@@ -21,3 +28,5 @@ export function Gallery() {
     </div>
   );
 }
+
+Gallery.tags = ["!dev"];

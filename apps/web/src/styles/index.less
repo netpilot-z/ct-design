@@ -38,13 +38,19 @@ code {
 
 .page {
   min-height: 100vh;
-  display: grid;
-  place-items: center;
   padding: 24px;
 }
 
+.page-shell {
+  width: min(1120px, 100%);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
 .panel {
-  width: min(720px, 100%);
+  width: 100%;
   padding: 32px;
   border: 1px solid rgba(148, 163, 184, 0.2);
   border-radius: 20px;
@@ -70,6 +76,12 @@ code {
   margin-top: 20px;
 }
 
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
 .icon-row {
   display: flex;
   gap: 16px;
@@ -91,6 +103,17 @@ code {
 
 .actions {
   margin-top: 24px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.demo-bar {
+  margin-top: 24px;
+}
+
+.demo-filter-bar {
+  margin-top: 24px;
 }
 
 .tag {
@@ -102,4 +125,10 @@ code {
   font-size: 12px;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+@media (max-width: 900px) {
+  .stat-grid {
+    grid-template-columns: 1fr;
+  }
 }

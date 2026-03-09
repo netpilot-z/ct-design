@@ -1,23 +1,46 @@
 import { Meta } from "@storybook/blocks";
 
-<Meta title="Introduction" />
+<Meta title="Overview/Introduction" />
 
-# ct-design Storybook
+# ct-design design system
 
-This Storybook documents the reusable UI layer in `@ct-design/ui` and the
-foundation packages behind it.
+This Storybook is the documentation entry for the reusable UI layer in
+`@ct-design/ui` and the foundation packages behind it. It is organized to help
+you browse components by category and evaluate them in both light and dark
+preview contexts.
 
-## Available packages
+## What this workspace includes
 
-- `@ct-design/ui`
-- `@ct-design/tokens`
-- `@ct-design/icons`
-- `@ct-design/request`
-- `@ct-design/utils`
+- `@ct-design/ui`: reusable enterprise UI primitives built on an antd adapter layer
+- `@ct-design/tokens`: theme tokens, CSS variables, and theme bridge outputs
+- `@ct-design/icons`: centralized icon exports based on Ant Design icons
+- `@ct-design/request`: shared request utilities
+- `@ct-design/utils`: shared utility helpers
 
-## Current goals
+## UI component map
 
-- Document reusable UI primitives
-- Validate the `components -> antd adapter` structure
-- Validate component usage in isolation
-- Provide a scalable docs entry for future design system work
+- `UI / Layout`: `Surface`, `PageHeader`, `PageCard`
+- `UI / Actions`: `Button`, `IconButton`, `ActionBar`, `FilterBar`
+- `UI / States`: `EmptyState`, `StatusTag`
+- `UI / Metrics`: `StatCard`
+- `Foundations`: `Icons`
+
+## Documentation conventions
+
+- Each component page follows a consistent structure: `Examples`, `Usage`, `Props`
+- The preview background can switch between light and dark
+- UI components inherit theme mode from the docs provider instead of requiring manual prop passing everywhere
+
+## Design goals
+
+- Keep the component layer small, reusable, and enterprise-oriented
+- Separate public UI APIs from the underlying antd adapter implementation
+- Make package consumption, local linking, and npm publishing straightforward
+- Keep Storybook aligned with the actual workspace integration model
+
+## Suggested reading order
+
+1. Start with `Overview / Introduction`
+2. Browse `UI / Layout` to understand container primitives
+3. Move to `UI / Actions` and `UI / States`
+4. Review `UI / Metrics` and `Foundations`

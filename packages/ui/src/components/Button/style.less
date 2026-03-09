@@ -6,3 +6,12 @@
 .ct-ui-button.ant-btn-primary {
   border: none;
 }
+
+.ct-ui-button--dark.ant-btn:not(:disabled):hover,
+.ct-ui-button--dark.ant-btn:not(:disabled):focus {
+  filter: brightness(1.05);
+}
+
+.ct-ui-button--dark.ant-btn:disabled {
+  box-shadow: none;
+}

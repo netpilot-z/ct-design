@@ -6,7 +6,7 @@
 - workspace 本地联调
 - GitHub 与 npm 的发布链路
 
-[English README](./README.md)
+[中文](README.zh.md) | [English](README.md)
 
 ## 技术栈
 
@@ -96,6 +96,47 @@ pnpm docs:build
 - 默认/暗黑主题 CSS Variables
 - Less 变量文件
 - Ant Design 主题 JSON
+
+`@ct-design/ui` 当前已经具备一组适合后台类项目复用的基础组件：
+
+- 布局与容器：`Surface`、`PageHeader`、`PageCard`
+- 操作相关：`Button`、`IconButton`、`ActionBar`、`FilterBar`
+- 状态与反馈：`EmptyState`、`StatusTag`
+- 指标展示：`StatCard`
+
+示例：
+
+```tsx
+import {
+  Button,
+  FilterBar,
+  PageHeader,
+  StatCard,
+  StatusTag
+} from "@ct-design/ui";
+
+export function DashboardExample() {
+  return (
+    <>
+      <PageHeader
+        title="Workspace dashboard"
+        subtitle="基于 antd adapter 的企业级基础组件。"
+        meta={<StatusTag tone="success">健康</StatusTag>}
+        actions={<Button type="primary">新建工作区</Button>}
+      />
+      <StatCard
+        label="活跃工作区"
+        value="12,480"
+        trend={<StatusTag tone="processing">+18.2%</StatusTag>}
+      />
+      <FilterBar
+        filters={<StatusTag tone="default">区域：全球</StatusTag>}
+        actions={<Button type="default">重置</Button>}
+      />
+    </>
+  );
+}
+```
 
 ## 发布
 

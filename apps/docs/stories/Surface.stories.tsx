@@ -3,18 +3,18 @@ import { SettingOutlined } from "@ct-design/icons";
 import { Surface } from "@ct-design/ui";
 
 const meta = {
-  title: "UI/Surface",
+  title: "UI/Layout/Surface",
   component: Surface,
   tags: ["autodocs"],
-  args: {
-    themeMode: "dark",
-    children: "A container surface for reusable layouts and cards."
-  },
-  argTypes: {
-    themeMode: {
-      control: "inline-radio",
-      options: ["default", "dark"]
+  parameters: {
+    docs: {
+      description: {
+        component: "Reusable surface container based on the antd card adapter, suitable for panels, cards, and content sections."
+      }
     }
+  },
+  args: {
+    children: "A container surface for reusable layouts and cards."
   }
 } satisfies Meta<typeof Surface>;
 
@@ -22,19 +22,14 @@ export default meta;
 
 type Story = StoryObj<typeof meta>;
 
-export const Default: Story = {};
-
-export const Light: Story = {
-  args: {
-    themeMode: "default",
-    children: "Light theme surface preview."
-  }
-};
-
-export const WithTitle: Story = {
-  args: {
-    title: "Settings",
-    extra: <SettingOutlined />,
-    children: "Ant Design adapter based card surface."
-  }
+export const Showcase: Story = {
+  tags: ["!dev"],
+  render: (args) => (
+    <Surface
+      {...args}
+      title="Settings"
+      extra={<SettingOutlined />}
+      children="Ant Design adapter based card surface."
+    />
+  )
 };

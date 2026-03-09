@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006 --ci",
-    "build": "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook build",
+    "dev": "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook dev -p 6006 --ci --docs",
+    "build": "cross-env STORYBOOK_DISABLE_TELEMETRY=1 storybook build --docs -o storybook-static",
     "lint": "eslint \".storybook/**/*.{ts,tsx}\" \"stories/**/*.{ts,tsx}\"",
     "typecheck": "tsc -p tsconfig.json --noEmit"
   },

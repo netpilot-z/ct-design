@@ -3,7 +3,7 @@
 An enterprise-oriented frontend monorepo starter focused on reusable packages,
 workspace-based local development, and an npm/GitHub release workflow.
 
-[中文文档](./README.zh.md)
+[中文](README.zh.md) | [English](README.md)
 
 ## Stack
 
@@ -93,6 +93,47 @@ Currently prepared packages:
 - CSS variables for default and dark themes
 - Less variable files
 - Ant Design theme JSON payloads
+
+`@ct-design/ui` currently includes reusable primitives for dashboard-style apps:
+
+- Layout and containers: `Surface`, `PageHeader`, `PageCard`
+- Actions: `Button`, `IconButton`, `ActionBar`, `FilterBar`
+- States and feedback: `EmptyState`, `StatusTag`
+- Metrics: `StatCard`
+
+Example usage:
+
+```tsx
+import {
+  Button,
+  FilterBar,
+  PageHeader,
+  StatCard,
+  StatusTag
+} from "@ct-design/ui";
+
+export function DashboardExample() {
+  return (
+    <>
+      <PageHeader
+        title="Workspace dashboard"
+        subtitle="Shared enterprise UI primitives built on top of antd adapters."
+        meta={<StatusTag tone="success">Healthy</StatusTag>}
+        actions={<Button type="primary">Create workspace</Button>}
+      />
+      <StatCard
+        label="Active workspaces"
+        value="12,480"
+        trend={<StatusTag tone="processing">+18.2%</StatusTag>}
+      />
+      <FilterBar
+        filters={<StatusTag tone="default">Region: Global</StatusTag>}
+        actions={<Button type="default">Reset</Button>}
+      />
+    </>
+  );
+}
+```
 
 ## Publishing
 

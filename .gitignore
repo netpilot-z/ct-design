@@ -5,6 +5,7 @@ dist
 coverage
 .rsbuild
 storybook-static
+sb-static-temp
 .DS_Store
 *.log
 *.tgz

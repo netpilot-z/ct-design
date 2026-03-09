@@ -1,7 +1,8 @@
 import { Card } from "antd";
 import type { CardProps } from "antd";
-import { getThemeTokens, type ThemeMode } from "@ct-design/tokens";
+import type { ThemeMode } from "@ct-design/tokens";
 import type { ReactNode } from "react";
+import { useCtThemeTokens } from "../../_theme/CtDesignProvider";
 
 export interface SurfaceAdapterProps extends Omit<CardProps, "title"> {
   themeMode?: ThemeMode;
@@ -10,11 +11,11 @@ export interface SurfaceAdapterProps extends Omit<CardProps, "title"> {
 
 export function SurfaceAdapter({
   className,
-  themeMode = "dark",
+  themeMode,
   style,
   ...props
 }: SurfaceAdapterProps) {
-  const tokens = getThemeTokens(themeMode);
+  const tokens = useCtThemeTokens(themeMode);
 
   return (
     <Card
