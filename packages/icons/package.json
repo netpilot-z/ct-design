@@ -1,6 +1,6 @@
 {
   "name": "@ct-design/icons",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared icon exports for the ct-design monorepo.",
   "license": "MIT",
   "type": "module",
@@ -30,7 +30,8 @@
   "scripts": {
     "build": "tsup --config tsup.config.ts",
     "lint": "eslint \"src/**/*.{ts,tsx}\"",
-    "typecheck": "tsc -p tsconfig.json --noEmit"
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "test": "node -e \"console.log('No tests for @ct-design/icons')\""
   },
   "peerDependencies": {
     "@ant-design/icons": ">=5",

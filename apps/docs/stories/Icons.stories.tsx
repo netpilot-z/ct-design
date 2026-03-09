@@ -1,4 +1,9 @@
-import { AppstoreOutlined, HomeOutlined, SettingOutlined } from "@ct-design/icons";
+import {
+  AppstoreOutlined,
+  HomeOutlined,
+  SearchEmpty,
+  SettingOutlined
+} from "@ct-design/icons";
 
 export default {
   title: "Foundations/Icons",
@@ -6,7 +11,8 @@ export default {
   parameters: {
     docs: {
       description: {
-        component: "Shared icon exports re-exposed from Ant Design icons for consistent workspace consumption."
+        component:
+          "Shared icon exports, including Ant Design re-exports and ct-design custom illustrations, for consistent workspace consumption."
       }
     }
   }
@@ -17,6 +23,8 @@ export function Gallery() {
     <div
       style={{
         display: "flex",
+        alignItems: "center",
+        flexWrap: "wrap",
         gap: 24,
         fontSize: 24,
         color: "#7dd3fc"
@@ -25,6 +33,7 @@ export function Gallery() {
       <HomeOutlined />
       <AppstoreOutlined />
       <SettingOutlined />
+      <SearchEmpty style={{ width: 72, height: 72 }} />
     </div>
   );
 }

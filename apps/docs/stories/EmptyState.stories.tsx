@@ -1,4 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
+import { SearchEmpty } from "@ct-design/icons";
 import { Button, EmptyState } from "@ct-design/ui";
 
 const meta = {
@@ -28,6 +29,21 @@ export const Showcase: Story = {
     <EmptyState
       {...args}
       action={<Button type="primary">Create project</Button>}
+    />
+  )
+};
+
+export const SearchNoResults: Story = {
+  tags: ["!dev"],
+  args: {
+    title: "No search results",
+    description: "Try another keyword or adjust your filters."
+  },
+  render: (args) => (
+    <EmptyState
+      {...args}
+      image={<SearchEmpty style={{ width: 144, height: 144 }} />}
+      action={<Button type="default">Reset filters</Button>}
     />
   )
 };
